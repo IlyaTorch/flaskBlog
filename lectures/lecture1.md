@@ -11,10 +11,6 @@ from config import Configuration
 
 app = Flask(__name__)
 app.config.from_object(Configuration)
-
-if __name__ == '__main__':
-    app.run()
-
 ```
 
 `app = Flask(__name__)` - отталкиваясь от имени этого файла(его пути) Flask будет искать другие файлы: шаблоны, css, js и др. файлы.
