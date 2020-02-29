@@ -9,5 +9,13 @@
 {% endblock %}
 
 {% block content %}
-    {{ post.body }}
+    <div class="tags">
+    Tags:
+        {% for tag in tags %}
+             <a href="{{ url_for('posts.tag_detail', slug=tag.slug) }}">{{ tag.name }}</a>
+        {% endfor %}
+    </div>
+    <div>
+        {{ post.body }}
+    </div>
 {% endblock %}
